@@ -7,15 +7,19 @@
       "RelativeMoniker": "D:0:0:{67FA1EA2-B3A8-BBA5-C83F-A71090B2F017}|Assembly-CSharp.csproj|solutionrelative:assets\\01-prospector\\__scripts\\prospector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{67FA1EA2-B3A8-BBA5-C83F-A71090B2F017}|Assembly-CSharp.csproj|d:\\github\\mod3-cardgames-pyramid-8\\assets\\01-prospector\\__scripts\\deck.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{67FA1EA2-B3A8-BBA5-C83F-A71090B2F017}|Assembly-CSharp.csproj|d:\\github\\mod3-cardgames-pyramid-8\\assets\\01-prospector\\__scripts\\cardprospector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67FA1EA2-B3A8-BBA5-C83F-A71090B2F017}|Assembly-CSharp.csproj|solutionrelative:assets\\01-prospector\\__scripts\\cardprospector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67FA1EA2-B3A8-BBA5-C83F-A71090B2F017}|Assembly-CSharp.csproj|D:\\GitHub\\mod3-cardgames-pyramid-8\\assets\\01-prospector\\__scripts\\deck.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{67FA1EA2-B3A8-BBA5-C83F-A71090B2F017}|Assembly-CSharp.csproj|solutionrelative:assets\\01-prospector\\__scripts\\deck.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{67FA1EA2-B3A8-BBA5-C83F-A71090B2F017}|Assembly-CSharp.csproj|d:\\github\\mod3-cardgames-pyramid-8\\assets\\01-prospector\\__scripts\\layout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{67FA1EA2-B3A8-BBA5-C83F-A71090B2F017}|Assembly-CSharp.csproj|D:\\GitHub\\mod3-cardgames-pyramid-8\\assets\\01-prospector\\__scripts\\layout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{67FA1EA2-B3A8-BBA5-C83F-A71090B2F017}|Assembly-CSharp.csproj|solutionrelative:assets\\01-prospector\\__scripts\\layout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{67FA1EA2-B3A8-BBA5-C83F-A71090B2F017}|Assembly-CSharp.csproj|d:\\github\\mod3-cardgames-pyramid-8\\assets\\01-prospector\\resources\\layoutxml.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "AbsoluteMoniker": "D:0:0:{67FA1EA2-B3A8-BBA5-C83F-A71090B2F017}|Assembly-CSharp.csproj|D:\\GitHub\\mod3-cardgames-pyramid-8\\assets\\01-prospector\\resources\\layoutxml.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{67FA1EA2-B3A8-BBA5-C83F-A71090B2F017}|Assembly-CSharp.csproj|solutionrelative:assets\\01-prospector\\resources\\layoutxml.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     }
   ],
@@ -26,11 +30,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "CardProspector.cs",
+              "DocumentMoniker": "D:\\GitHub\\mod3-cardgames-pyramid-8\\Assets\\01-Prospector\\__Scripts\\CardProspector.cs",
+              "RelativeDocumentMoniker": "Assets\\01-Prospector\\__Scripts\\CardProspector.cs",
+              "ToolTip": "D:\\GitHub\\mod3-cardgames-pyramid-8\\Assets\\01-Prospector\\__Scripts\\CardProspector.cs",
+              "RelativeToolTip": "Assets\\01-Prospector\\__Scripts\\CardProspector.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-26T00:27:07.407Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Deck.cs",
               "DocumentMoniker": "D:\\GitHub\\mod3-cardgames-pyramid-8\\Assets\\01-Prospector\\__Scripts\\Deck.cs",
               "RelativeDocumentMoniker": "Assets\\01-Prospector\\__Scripts\\Deck.cs",
@@ -38,8 +55,7 @@
               "RelativeToolTip": "Assets\\01-Prospector\\__Scripts\\Deck.cs",
               "ViewState": "AQIAABgBAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-26T00:24:24.678Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-26T00:24:24.678Z"
             },
             {
               "$type": "Document",
@@ -49,14 +65,14 @@
               "RelativeDocumentMoniker": "Assets\\01-Prospector\\__Scripts\\Prospector.cs",
               "ToolTip": "D:\\GitHub\\mod3-cardgames-pyramid-8\\Assets\\01-Prospector\\__Scripts\\Prospector.cs",
               "RelativeToolTip": "Assets\\01-Prospector\\__Scripts\\Prospector.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAAAkAAAA",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAIwBQAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-26T00:22:19.085Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Layout.cs",
               "DocumentMoniker": "D:\\GitHub\\mod3-cardgames-pyramid-8\\Assets\\01-Prospector\\__Scripts\\Layout.cs",
               "RelativeDocumentMoniker": "Assets\\01-Prospector\\__Scripts\\Layout.cs",
@@ -64,12 +80,11 @@
               "RelativeToolTip": "Assets\\01-Prospector\\__Scripts\\Layout.cs",
               "ViewState": "AQIAADIAAAAAAAAAAAAAAFcAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-26T00:15:26.076Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-26T00:15:26.076Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "LayoutXML.xml",
               "DocumentMoniker": "D:\\GitHub\\mod3-cardgames-pyramid-8\\Assets\\01-Prospector\\Resources\\LayoutXML.xml",
               "RelativeDocumentMoniker": "Assets\\01-Prospector\\Resources\\LayoutXML.xml",
@@ -77,8 +92,7 @@
               "RelativeToolTip": "Assets\\01-Prospector\\Resources\\LayoutXML.xml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAACUAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
-              "WhenOpened": "2024-03-26T00:14:48.788Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-26T00:14:48.788Z"
             }
           ]
         }
