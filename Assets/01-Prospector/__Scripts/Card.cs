@@ -32,7 +32,6 @@ public class Card : MonoBehaviour
         }
     }
 
-
     // Use this for initialization
     void Start()
     {
@@ -82,11 +81,11 @@ public class Card : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    virtual public void OnMouseUpAsButton()
     {
-
+        print(name);
     }
+
 } // class Card
 
 [System.Serializable]
