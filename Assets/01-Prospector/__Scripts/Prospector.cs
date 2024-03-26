@@ -310,7 +310,7 @@ public class Prospector : MonoBehaviour
         {
             gameOverText.text = "Round Over";
             roundResultText.text = "You won this round!\nRound Score: " + score;
-            ShowResultsUI(won);
+            ShowResultsUI(true);
             ScoreManager.EVENT(eScoreEvent.gameWin);
             FloatingScoreHandler(eScoreEvent.gameWin);
         }
@@ -323,7 +323,7 @@ public class Prospector : MonoBehaviour
                 roundResultText.text = str;
             }
             else roundResultText.text = "Your final score was " + score;
-            ShowResultsUI(won);
+            ShowResultsUI(true);
 
             ScoreManager.EVENT(eScoreEvent.gameLoss);
             FloatingScoreHandler(eScoreEvent.gameLoss);
