@@ -48,7 +48,7 @@ public class Prospector : MonoBehaviour
 
     List<CardProspector> ConvertListCardsToListCardProspectors(List<Card> lCD)
     {
-        List<CardProspector> lCP = new List<CardProspector>();
+        List<CardProspector> lCP = new();
         CardProspector tCP;
         foreach (Card tCD in lCD)
         {
@@ -93,11 +93,10 @@ public class Prospector : MonoBehaviour
             cp.SetSortingLayerName(tSD.layerName);
 
             tableau.Add(cp);
-
-            MoveToTarget(Draw());
-
-            UpdateDrawPile();
         }
+        MoveToTarget(Draw());
+
+        UpdateDrawPile();
     }
 
     void MoveToDiscard(CardProspector cd)
