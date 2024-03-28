@@ -187,7 +187,7 @@ public class Prospector : MonoBehaviour
         cd.transform.parent = layoutAnchor;
         cd.transform.localPosition = new Vector3(
             layout.multiplier.x * layout.discardPile.x,
-            layout.multiplier.y * layout.multiplier.y,
+            layout.multiplier.y * layout.discardPile.y,
             -layout.discardPile.layerID + 0.5f);
         cd.faceUp = true;
 
@@ -204,7 +204,7 @@ public class Prospector : MonoBehaviour
 
         cd.transform.localPosition = new Vector3(
             layout.multiplier.x * layout.discardPile.x,
-            layout.multiplier.y * layout.multiplier.y,
+            layout.multiplier.y * layout.discardPile.y,
             -layout.discardPile.layerID);
         cd.faceUp = true;
 
