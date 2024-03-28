@@ -7,16 +7,24 @@
       "RelativeMoniker": "D:0:0:{67FA1EA2-B3A8-BBA5-C83F-A71090B2F017}|Assembly-CSharp.csproj|solutionrelative:assets\\02-pyramid\\__scripts\\cardpyramid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|d:\\github\\mod3-cardgames-pyramid-8\\assets\\01-prospector 1\\resources\\layout-pyramid.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:assets\\01-prospector 1\\resources\\layout-pyramid.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+      "AbsoluteMoniker": "D:0:0:{67FA1EA2-B3A8-BBA5-C83F-A71090B2F017}|Assembly-CSharp.csproj|D:\\GitHub\\mod3-cardgames-pyramid-8\\assets\\01-prospector\\__scripts\\cardprospector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67FA1EA2-B3A8-BBA5-C83F-A71090B2F017}|Assembly-CSharp.csproj|solutionrelative:assets\\01-prospector\\__scripts\\cardprospector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{67FA1EA2-B3A8-BBA5-C83F-A71090B2F017}|Assembly-CSharp.csproj|D:\\GitHub\\mod3-cardgames-pyramid-8\\assets\\01-prospector\\__scripts\\prospector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{67FA1EA2-B3A8-BBA5-C83F-A71090B2F017}|Assembly-CSharp.csproj|solutionrelative:assets\\01-prospector\\__scripts\\prospector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{67FA1EA2-B3A8-BBA5-C83F-A71090B2F017}|Assembly-CSharp.csproj|D:\\GitHub\\mod3-cardgames-pyramid-8\\assets\\02-pyramid\\resources\\layout-pyramid.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{67FA1EA2-B3A8-BBA5-C83F-A71090B2F017}|Assembly-CSharp.csproj|solutionrelative:assets\\02-pyramid\\resources\\layout-pyramid.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{67FA1EA2-B3A8-BBA5-C83F-A71090B2F017}|Assembly-CSharp.csproj|D:\\GitHub\\mod3-cardgames-pyramid-8\\assets\\01-prospector\\__scripts\\layout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{67FA1EA2-B3A8-BBA5-C83F-A71090B2F017}|Assembly-CSharp.csproj|solutionrelative:assets\\01-prospector\\__scripts\\layout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\GitHub\\mod3-cardgames-pyramid-8\\Assets\\01-Prospector 1\\Resources\\Layout-Pyramid.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\01-Prospector 1\\Resources\\Layout-Pyramid.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{67FA1EA2-B3A8-BBA5-C83F-A71090B2F017}|Assembly-CSharp.csproj|D:\\GitHub\\mod3-cardgames-pyramid-8\\assets\\01-prospector\\__scripts\\scoremanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -35,10 +43,6 @@
       "RelativeMoniker": "D:0:0:{67FA1EA2-B3A8-BBA5-C83F-A71090B2F017}|Assembly-CSharp.csproj|solutionrelative:assets\\01-prospector\\__scripts\\deck.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{67FA1EA2-B3A8-BBA5-C83F-A71090B2F017}|Assembly-CSharp.csproj|D:\\GitHub\\mod3-cardgames-pyramid-8\\assets\\01-prospector\\__scripts\\cardprospector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{67FA1EA2-B3A8-BBA5-C83F-A71090B2F017}|Assembly-CSharp.csproj|solutionrelative:assets\\01-prospector\\__scripts\\cardprospector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{67FA1EA2-B3A8-BBA5-C83F-A71090B2F017}|Assembly-CSharp.csproj|D:\\GitHub\\mod3-cardgames-pyramid-8\\assets\\mainmenubuttons.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{67FA1EA2-B3A8-BBA5-C83F-A71090B2F017}|Assembly-CSharp.csproj|solutionrelative:assets\\mainmenubuttons.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -50,8 +54,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Layout-Pyramid.xml",
+              "DocumentMoniker": "D:\\GitHub\\mod3-cardgames-pyramid-8\\Assets\\02-Pyramid\\Resources\\Layout-Pyramid.xml",
+              "RelativeDocumentMoniker": "Assets\\02-Pyramid\\Resources\\Layout-Pyramid.xml",
+              "ToolTip": "D:\\GitHub\\mod3-cardgames-pyramid-8\\Assets\\02-Pyramid\\Resources\\Layout-Pyramid.xml",
+              "RelativeToolTip": "Assets\\02-Pyramid\\Resources\\Layout-Pyramid.xml",
+              "ViewState": "AQIAACEAAAAAAAAAAAAAADoAAAA7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
+              "WhenOpened": "2024-03-28T22:05:38.336Z"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -60,14 +76,14 @@
               "RelativeDocumentMoniker": "Assets\\02-Pyramid\\__Scripts\\CardPyramid.cs",
               "ToolTip": "D:\\GitHub\\mod3-cardgames-pyramid-8\\Assets\\02-Pyramid\\__Scripts\\CardPyramid.cs",
               "RelativeToolTip": "Assets\\02-Pyramid\\__Scripts\\CardPyramid.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-28T01:57:01.257Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "Layout-Pyramid.xml",
               "DocumentMoniker": "D:\\GitHub\\mod3-cardgames-pyramid-8\\Assets\\01-Prospector 1\\Resources\\Layout-Pyramid.xml",
               "RelativeDocumentMoniker": "Assets\\01-Prospector 1\\Resources\\Layout-Pyramid.xml",
@@ -80,13 +96,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Layout.cs",
               "DocumentMoniker": "D:\\GitHub\\mod3-cardgames-pyramid-8\\Assets\\01-Prospector\\__Scripts\\Layout.cs",
               "RelativeDocumentMoniker": "Assets\\01-Prospector\\__Scripts\\Layout.cs",
               "ToolTip": "D:\\GitHub\\mod3-cardgames-pyramid-8\\Assets\\01-Prospector\\__Scripts\\Layout.cs",
               "RelativeToolTip": "Assets\\01-Prospector\\__Scripts\\Layout.cs",
-              "ViewState": "AQIAABYAAAAAAAAAAAAYwBgAAAAiAAAA",
+              "ViewState": "AQIAAEIAAAAAAAAAAAAiwFUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-26T00:15:26.076Z"
             },
@@ -104,7 +120,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 1,
               "Title": "CardProspector.cs",
               "DocumentMoniker": "D:\\GitHub\\mod3-cardgames-pyramid-8\\Assets\\01-Prospector\\__Scripts\\CardProspector.cs",
               "RelativeDocumentMoniker": "Assets\\01-Prospector\\__Scripts\\CardProspector.cs",
@@ -116,7 +132,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "Scoreboard.cs",
               "DocumentMoniker": "D:\\GitHub\\mod3-cardgames-pyramid-8\\Assets\\01-Prospector\\__Scripts\\Scoreboard.cs",
               "RelativeDocumentMoniker": "Assets\\01-Prospector\\__Scripts\\Scoreboard.cs",
@@ -128,7 +144,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "FloatingScore.cs",
               "DocumentMoniker": "D:\\GitHub\\mod3-cardgames-pyramid-8\\Assets\\01-Prospector\\__Scripts\\FloatingScore.cs",
               "RelativeDocumentMoniker": "Assets\\01-Prospector\\__Scripts\\FloatingScore.cs",
@@ -140,7 +156,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "ScoreManager.cs",
               "DocumentMoniker": "D:\\GitHub\\mod3-cardgames-pyramid-8\\Assets\\01-Prospector\\__Scripts\\ScoreManager.cs",
               "RelativeDocumentMoniker": "Assets\\01-Prospector\\__Scripts\\ScoreManager.cs",
@@ -152,7 +168,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "Deck.cs",
               "DocumentMoniker": "D:\\GitHub\\mod3-cardgames-pyramid-8\\Assets\\01-Prospector\\__Scripts\\Deck.cs",
               "RelativeDocumentMoniker": "Assets\\01-Prospector\\__Scripts\\Deck.cs",
@@ -164,7 +180,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "MainMenuButtons.cs",
               "DocumentMoniker": "D:\\GitHub\\mod3-cardgames-pyramid-8\\Assets\\MainMenuButtons.cs",
               "RelativeDocumentMoniker": "Assets\\MainMenuButtons.cs",
