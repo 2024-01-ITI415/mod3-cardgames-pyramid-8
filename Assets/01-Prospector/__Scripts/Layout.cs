@@ -51,7 +51,7 @@ public class Layout : MonoBehaviour
             tSD = new SlotDef(); // Create a new SlotDef instance
             if(slotsX[i].HasAtt("type")) {
                 // If this <slot> has a type attribute parse it
-                tSD.type = "slot";
+                tSD.type = slotsX[i].att("type");
             }
             else {
                 // If not, set its type to "slot"; it's a card in the rows
@@ -69,7 +69,7 @@ public class Layout : MonoBehaviour
             switch(tSD.type) {
                 // pull additional attributes based on the type of this <slot>
                 case "slot":
-                    tSD.faceUp = (slotsX[i].att("faceup") == "1");
+                    tSD.faceUp = slotsX[i].att("faceup") == "1";
                     tSD.id = int.Parse(slotsX[i].att("id"));
                     if(slotsX[i].HasAtt("hiddenby")) {
                         string[] hiding = slotsX[i].att("hiddenby").Split(',');

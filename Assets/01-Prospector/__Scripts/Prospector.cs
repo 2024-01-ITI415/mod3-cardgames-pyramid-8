@@ -37,10 +37,15 @@ public class Prospector : MonoBehaviour {
 	}
 
 	void Start() {
-		deck = GetComponent<Deck> ();
-		deck.InitDeck (deckXML.text);
-		Deck.Shuffle(ref deck.cards);
+		deck = GetComponent<Deck> (); // Get the Deck
+		deck.InitDeck (deckXML.text); // Pass DeckXML to it
+		Deck.Shuffle(ref deck.cards); // This shuffles the deck by reference
 
+		Card c;
+		for(int cNum = 0; cNum < deck.cards.Count; cNum++) {
+			c = deck.cards[cNum];
+			c.transform.localPosition = new Vector3((cNum % 13) * 3, cNum / 13 * 4, 0);
+		}
 		layout = GetComponent<Layout>();
 		layout.ReadLayout(layoutXML.text);
 
@@ -186,9 +191,9 @@ public class Prospector : MonoBehaviour {
 			// Position it correctly with the layout.drawPile.stagger
 			Vector2 dpStagger = layout.drawPile.stagger;
 			cd.transform.localPosition = new Vector3(
-				layout.multiplier.x * (layout.discardPile.x + i * dpStagger.x),
-				layout.multiplier.y * (layout.discardPile.y + i * dpStagger.y),
-				-layout.discardPile.layerID + 0.1f * i);
+				layout.multiplier.x * (layout.drawPile.x + i * dpStagger.x),
+				layout.multiplier.y * (layout.drawPile.y + i * dpStagger.y),
+				-layout.drawPile.layerID + 0.1f * i);
 			
 			cd.faceUp = false; // Make them all face-down
 			cd.state = eCardState.drawpile;
@@ -201,6 +206,7 @@ public class Prospector : MonoBehaviour {
 
 	// CardClicked is called any time a card in the game is clicked
 	public void CardClicked(CardProspector cd) {
+		Debug.Log("In CardClicked" + cd.name);
 		// The reacion is determined by the state of the clicked card
 		switch(cd.state) {
 			case eCardState.target:
@@ -233,6 +239,49 @@ public class Prospector : MonoBehaviour {
 				SetTableauFaces(); // Update tableau card face-ups
 				break;
 		}
+
+		// Check to see whether the game is over or not
+		CheckForGameOver();
+	}
+
+	// Test whether the game is over
+	void CheckForGameOver() {
+		// If the tableau is empty, the game is over
+		if(tableau.Count == 0) {
+			// Call GameOver() with a win
+			GameOver(true);
+			return;
+		}
+
+		// If there are still cards in the draw pile, the game's not over
+		if(drawPile.Count > 0) {
+			return;
+		}
+
+		// Check for remaining valid plays
+		foreach(CardProspector cd in tableau) {
+			if(AdjacentRank(cd, target)) {
+				// If there is a valid play, the game's not over
+				return;
+			}
+		}
+
+		// Since there are no valid plays, the game is over
+		// Call GameOver with a loss
+		GameOver(false);
+	}
+
+	// Called when the game is over. Simple for now, but expandable
+	void GameOver(bool won) {
+		if(won) {
+			print("Game Over. You won! :)");
+		}
+		else {
+			print("Game Over. You lost. :(");
+		}
+		
+		// Reload the scene, resetting the game
+		SceneManager.LoadScene("__Prospector*");
 	}
 
 	// Return true if the two cards are adjacent in rank (A & K Wrap around)
