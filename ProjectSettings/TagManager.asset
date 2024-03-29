@@ -62,9 +62,12 @@ TagManager:
   - name: Row6
     uniqueID: 4114174401
     locked: 0
-  - name: Discard
-    uniqueID: 3805507539
-    locked: 0
   - name: Draw
     uniqueID: 762866325
+    locked: 0
+  - name: Foundation
+    uniqueID: 2770611103
+    locked: 0
+  - name: Discard
+    uniqueID: 3805507539
     locked: 0

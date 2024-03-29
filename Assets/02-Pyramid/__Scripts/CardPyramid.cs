@@ -8,7 +8,6 @@ public enum PyramidCardState
     drawpile,
     pyramid,
     available,
-    foundation,
     discard
 }
 

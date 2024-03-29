@@ -173,6 +173,7 @@ public class Pyramid : MonoBehaviour
     {
         foreach (CardPyramid cd in pyramid)
         {
+            int blockersGone = 0;
             if (cd.blocking.Count == 0)
                 cd.state = PyramidCardState.available;
 
@@ -180,9 +181,12 @@ public class Pyramid : MonoBehaviour
             {
                 if (blocker.state == PyramidCardState.discard)
                 {
-                    cd.state = PyramidCardState.available;
+                    blockersGone++;
                 }
             }
+
+            if (blockersGone == cd.blocking.Count) 
+                cd.state = PyramidCardState.available;
         }
     }
 
@@ -203,18 +207,19 @@ public class Pyramid : MonoBehaviour
 
     void MoveToFoundation(CardPyramid cd)
     {
+        CardPyramid fcd;
         for (int i = 0; i < foundation.Count; i++)
         {
-            CardPyramid fcd = foundation[i];
+            fcd = foundation[foundation.Count - 1 - i];
 
             fcd.transform.localPosition = new Vector3(
                 layout.multiplier.x * (layout.foundation.x),
                 layout.multiplier.y * (layout.foundation.y),
-                -layout.foundation.layerID + 0.1f * i);
+                -layout.foundation.layerID + 0.1f * (i+1));
 
-            cd.faceUp = true;
+            fcd.faceUp = true;
             fcd.SetSortingLayerName(layout.foundation.layerName);
-            fcd.SetSortOrder(-10 * i);
+            fcd.SetSortOrder(-10 * (i+1));
         }
 
         cd.state = PyramidCardState.available;
@@ -229,7 +234,14 @@ public class Pyramid : MonoBehaviour
 
         cd.SetSortingLayerName(layout.foundation.layerName);
         Debug.Log(layout.foundation.layerName);
-        cd.SetSortOrder(1);
+        cd.SetSortOrder(0);
+
+        if (firstCard != null)
+        {
+            firstCard.Halo.enabled = false;
+            firstCard = null;
+        }
+
     }
 
     void UpdateDrawPile()
@@ -259,7 +271,6 @@ public class Pyramid : MonoBehaviour
         switch (cd.state)
         {
             case PyramidCardState.pyramid:
-            case PyramidCardState.foundation:
                 break;
 
             case PyramidCardState.drawpile:
@@ -268,11 +279,11 @@ public class Pyramid : MonoBehaviour
                 ScoreManager.EVENT(eScoreEvent.draw);
                 FloatingScoreHandler(eScoreEvent.draw);
                 break;
-
             case PyramidCardState.available:
                 if (cd.rank == 13)
                 {
                     pyramid.Remove(cd);
+                    foundation.Remove(cd);
                     MoveToDiscard(cd);
                     UpdatePyramidAvailability();
                     ScoreManager.EVENT(eScoreEvent.mine);
@@ -427,6 +438,27 @@ public class Pyramid : MonoBehaviour
                     fs.reportFinishTo = fsRun.gameObject;
                 }
                 break;
+        }
+    }
+
+    public void MoveFoundationToDrawPile()
+    {
+        CardPyramid cd;
+        for (int i = 0; i < foundation.Count; i++)
+        {
+            cd = foundation[i];
+            cd.transform.parent = layoutAnchor;
+
+            Vector2 dpStagger = layout.drawPile.stagger;
+            cd.transform.localPosition = new Vector3(
+                layout.multiplier.x * (layout.drawPile.x + i * dpStagger.x),
+                layout.multiplier.y * (layout.drawPile.y + i * dpStagger.y),
+                -layout.drawPile.layerID + 0.1f * i);
+            cd.faceUp = false;
+            cd.state = PyramidCardState.drawpile;
+
+            cd.SetSortingLayerName(layout.drawPile.layerName);
+            cd.SetSortOrder(-10 * i);
         }
     }
 }
