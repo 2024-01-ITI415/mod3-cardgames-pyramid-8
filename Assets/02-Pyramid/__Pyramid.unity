@@ -588,8 +588,9 @@ MonoBehaviour:
   - Row4
   - Row5
   - Row6
-  - Discard
   - Draw
+  - Foundation
+  - Discard
 --- !u!114 &827460517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -633,11 +634,12 @@ MonoBehaviour:
   deck: {fileID: 0}
   layout: {fileID: 0}
   drawPile: []
+  foundation: []
   layoutAnchor: {fileID: 0}
-  target: {fileID: 0}
   pyramid: []
   discardPile: []
   fsRun: {fileID: 0}
+  firstCard: {fileID: 0}
 --- !u!1 &1721917564
 GameObject:
   m_ObjectHideFlags: 0

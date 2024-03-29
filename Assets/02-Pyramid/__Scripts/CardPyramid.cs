@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public enum PyramidCardState
 {
     drawpile,
     pyramid,
+    available,
     foundation,
     discard
 }
@@ -14,11 +16,13 @@ public class CardPyramid : Card
 {
     public PyramidCardState state = PyramidCardState.drawpile;
 
-    public List<CardPyramid> hiddenBy = new();
+    public List<CardPyramid> blocking = new();
 
     public int layoutID;
 
     public SlotDef slotDef;
+
+    public Behaviour Halo;
 
     public override void OnMouseUpAsButton()
     {

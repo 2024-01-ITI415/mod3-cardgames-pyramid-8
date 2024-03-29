@@ -32,11 +32,13 @@ public class Pyramid : MonoBehaviour
     public Deck deck;
     public Layout layout;
     public List<CardPyramid> drawPile;
+    public List<CardPyramid> foundation;
     public Transform layoutAnchor;
-    public CardPyramid target;
     public List<CardPyramid> pyramid;
     public List<CardPyramid> discardPile;
     public FloatingScore fsRun;
+
+    public CardPyramid firstCard;
 
     void Awake()
     {
@@ -90,6 +92,7 @@ public class Pyramid : MonoBehaviour
         drawPile = ConvertListCardsToListCardPyramids(deck.cards);
         Debug.Log(drawPile[0]);
         LayoutGame();
+        UpdatePyramidAvailability();
     }
 
     List<CardPyramid> ConvertListCardsToListCardPyramids(List<Card> lCD)
@@ -147,7 +150,7 @@ public class Pyramid : MonoBehaviour
             foreach (int hid in tCP.slotDef.hiddenBy)
             {
                 cp = FindCardByLayoutID(hid);
-                tCP.hiddenBy.Add(cp);
+                tCP.blocking.Add(cp);
             }
         }
 
@@ -166,19 +169,20 @@ public class Pyramid : MonoBehaviour
         return null;
     }
 
-    void SetPyramidHiddens()
+    void UpdatePyramidAvailability()
     {
         foreach (CardPyramid cd in pyramid)
         {
-            bool faceUp = true;
-            foreach (CardPyramid cover in cd.hiddenBy)
+            if (cd.blocking.Count == 0)
+                cd.state = PyramidCardState.available;
+
+            foreach (CardPyramid blocker in cd.blocking)
             {
-                if (cover.state == PyramidCardState.pyramid)
+                if (blocker.state == PyramidCardState.discard)
                 {
-                    faceUp = false;
+                    cd.state = PyramidCardState.available;
                 }
             }
-            cd.faceUp = faceUp;
         }
     }
 
@@ -199,9 +203,23 @@ public class Pyramid : MonoBehaviour
 
     void MoveToFoundation(CardPyramid cd)
     {
-        target = cd;
-        cd.state = PyramidCardState.foundation;
+        for (int i = 0; i < foundation.Count; i++)
+        {
+            CardPyramid fcd = foundation[i];
+
+            fcd.transform.localPosition = new Vector3(
+                layout.multiplier.x * (layout.foundation.x),
+                layout.multiplier.y * (layout.foundation.y),
+                -layout.foundation.layerID + 0.1f * i);
+
+            cd.faceUp = true;
+            fcd.SetSortingLayerName(layout.foundation.layerName);
+            fcd.SetSortOrder(-10 * i);
+        }
+
+        cd.state = PyramidCardState.available;
         cd.transform.parent = layoutAnchor;
+        foundation.Add(cd);
 
         cd.transform.localPosition = new Vector3(
             layout.multiplier.x * layout.foundation.x,
@@ -210,7 +228,8 @@ public class Pyramid : MonoBehaviour
         cd.faceUp = true;
 
         cd.SetSortingLayerName(layout.foundation.layerName);
-        cd.SetSortOrder(0);
+        Debug.Log(layout.foundation.layerName);
+        cd.SetSortOrder(1);
     }
 
     void UpdateDrawPile()
@@ -239,6 +258,10 @@ public class Pyramid : MonoBehaviour
     {
         switch (cd.state)
         {
+            case PyramidCardState.pyramid:
+            case PyramidCardState.foundation:
+                break;
+
             case PyramidCardState.drawpile:
                 MoveToFoundation(Draw());
                 UpdateDrawPile();
@@ -246,28 +269,40 @@ public class Pyramid : MonoBehaviour
                 FloatingScoreHandler(eScoreEvent.draw);
                 break;
 
-            case PyramidCardState.pyramid:
-            case PyramidCardState.foundation:
-                bool validMatch = true;
-
-                if (!cd.faceUp)
+            case PyramidCardState.available:
+                if (cd.rank == 13)
                 {
-                    validMatch = false;
-                }
-                if (!AdjacentRank(cd, target))
-                {
-                    validMatch = false;
-                }
-                if (!validMatch)
-                {
+                    pyramid.Remove(cd);
+                    MoveToDiscard(cd);
+                    UpdatePyramidAvailability();
+                    ScoreManager.EVENT(eScoreEvent.mine);
+                    FloatingScoreHandler(eScoreEvent.mine);
                     return;
                 }
+                if (firstCard == null)
+                {
+                    firstCard = cd;
+                    cd.Halo.enabled = true;
 
-                pyramid.Remove(cd);
-                MoveToDiscard(cd);
-                SetPyramidHiddens();
-                ScoreManager.EVENT(eScoreEvent.mine);
-                FloatingScoreHandler(eScoreEvent.mine);
+                }
+                else
+                {
+                    if (!AdjacentRank(firstCard, cd))
+                    {
+                        firstCard = null;
+                        return;
+                    }
+
+                    pyramid.Remove(firstCard);
+                    MoveToDiscard(firstCard);
+                    firstCard = null;
+
+                    pyramid.Remove(cd);
+                    MoveToDiscard(cd);
+                    UpdatePyramidAvailability();
+                    ScoreManager.EVENT(eScoreEvent.mine);
+                    FloatingScoreHandler(eScoreEvent.mine);
+                }
                 break;
         }
 
@@ -289,10 +324,12 @@ public class Pyramid : MonoBehaviour
 
         foreach (CardPyramid cd in pyramid)
         {
-            if (AdjacentRank(cd, target))
+            if (AdjacentRank(firstCard, cd))
             {
+                firstCard = null;
                 return;
             }
+            firstCard = cd;
         }
 
         GameOver(false);
@@ -337,16 +374,9 @@ public class Pyramid : MonoBehaviour
 
     public bool AdjacentRank(CardPyramid c0, CardPyramid c1)
     {
-        if (!c0.faceUp || !c1.faceUp)
-            return false;
+        c0.Halo.enabled = false;
 
-        if (Mathf.Abs(c0.rank - c1.rank) == 1)
-            return true;
-
-        if (c0.rank == 1 && c1.rank == 13)
-            return true;
-
-        if (c0.rank == 13 && c1.rank == 1)
+        if (Mathf.Abs(c0.rank + c1.rank) == 13)
             return true;
 
         return false;

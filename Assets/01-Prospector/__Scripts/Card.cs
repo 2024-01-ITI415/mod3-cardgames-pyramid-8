@@ -35,12 +35,13 @@ public class Card : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        PopulateSpriteRenderers();
         SetSortOrder(0);
     }
 
     public void PopulateSpriteRenderers()
     {
-        if (spriteRenderers == null || spriteRenderers.Length == 0)
+        if (spriteRenderers == null || spriteRenderers.Length >= 0)
         {
             spriteRenderers = GetComponentsInChildren<SpriteRenderer>();
         }
@@ -54,12 +55,11 @@ public class Card : MonoBehaviour
         {
             tSR.sortingLayerName = tSLN;
         }
+        SetSortOrder(this.GetComponent<SpriteRenderer>().sortingOrder);
     }
 
     public void SetSortOrder(int sOrd)
     {
-        PopulateSpriteRenderers();
-
         foreach (SpriteRenderer tSR in spriteRenderers)
         {
             if (tSR.gameObject == this.gameObject)

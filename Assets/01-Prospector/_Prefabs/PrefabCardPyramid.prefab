@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 21200000}
   - component: {fileID: 6500000}
   - component: {fileID: 3578110129877770197}
+  - component: {fileID: 8403557089628703401}
   m_Layer: 0
   m_Name: PrefabCardPyramid
   m_TagString: Untagged
@@ -144,3 +145,16 @@ MonoBehaviour:
     hiddenBy: 
     type: slot
     stagger: {x: 0, y: 0}
+  Halo: {fileID: 8403557089628703401}
+--- !u!122 &8403557089628703401
+Halo:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 0
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294941762
+  m_Size: 2

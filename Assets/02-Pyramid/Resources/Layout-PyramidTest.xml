@@ -56,12 +56,12 @@
 	<slot id="27" x="0" y="1.5" faceup="1" layer="0" hiddenby="25,26"/>
 
 	<!-- This positions the draw pile and staggers it -->
-	<slot type="drawpile" x="9" y="4" xstagger="0" layer="7"/>
+	<slot type="drawpile" x="9" y="4" xstagger="0" layer="0"/>
 
 	<!-- Position for the foundation (top card revealed from draw pile)-->
-	<slot type="foundation" x="7" y="4" faceup="1" layer="8"/>
+	<slot type="foundation" x="7" y="4" faceup="1" layer="0"/>
 
 	<!-- This positions the discard pile and target card -->
-	<slot type="discardpile" x="-8" y="4" faceup="0" layer="9"/>
+	<slot type="discardpile" x="-8" y="4" faceup="0" layer="0"/>
 </xml>
 	
