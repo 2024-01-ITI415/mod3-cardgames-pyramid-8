@@ -23,7 +23,7 @@ public class Prospector : MonoBehaviour
     public Vector2 fsPosMid2 = new Vector2(0.4f, 1.0f);
     public Vector2 fsPosEnd = new Vector2(0.5f, 0.95f);
 
-    public float reloadDelay = 2f;
+    public float reloadDelay = 4f;
 
     public Text gameOverText, roundResultText, highScoreText;
 
@@ -313,6 +313,7 @@ public class Prospector : MonoBehaviour
             ShowResultsUI(true);
             ScoreManager.EVENT(eScoreEvent.gameWin);
             FloatingScoreHandler(eScoreEvent.gameWin);
+            Invoke(nameof(ReloadLevel), reloadDelay);
         }
         else
         {
@@ -327,14 +328,17 @@ public class Prospector : MonoBehaviour
 
             ScoreManager.EVENT(eScoreEvent.gameLoss);
             FloatingScoreHandler(eScoreEvent.gameLoss);
+            Invoke(nameof(ReloadMain), reloadDelay);
         }
-
-        Invoke(nameof(ReloadLevel), reloadDelay);
     }
 
     void ReloadLevel()
     {
         SceneManager.LoadScene("__Prospector");
+    }
+    void ReloadMain()
+    {
+        SceneManager.LoadScene("mainScene");
     }
 
     public bool AdjacentRank(CardProspector c0, CardProspector c1)

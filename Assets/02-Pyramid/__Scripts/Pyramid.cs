@@ -23,7 +23,7 @@ public class Pyramid : MonoBehaviour
     public Vector2 fsPosMid2 = new Vector2(0.4f, 1.0f);
     public Vector2 fsPosEnd = new Vector2(0.5f, 0.95f);
 
-    public float reloadDelay = 2f;
+    public float reloadDelay = 4f;
 
     public Text gameOverText, roundResultText, highScoreText;
 
@@ -392,7 +392,7 @@ public class Pyramid : MonoBehaviour
 
     void ReloadLevel()
     {
-        SceneManager.LoadScene("__Prospector");
+        SceneManager.LoadScene("mainScene");
     }
 
     public bool AdjacentRank(CardPyramid c0, CardPyramid c1)
