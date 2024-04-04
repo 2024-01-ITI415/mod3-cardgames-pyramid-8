@@ -330,23 +330,28 @@ public class Pyramid : MonoBehaviour
             return;
         }
 
-        foreach (CardPyramid cd1 in pyramid)
+        foreach (CardPyramid cd in pyramid)
         {
-            foreach (CardPyramid pcd in pyramid)
+            if (cd.state == PyramidCardState.available)
             {
-
-                if (AdjacentRank(cd1, pcd))
+                foreach (CardPyramid pcd in pyramid)
                 {
-                    return;
+                    if (pcd.state == PyramidCardState.available)
+                    {
+                        if (AdjacentRank(cd, pcd))
+                        {
+                            return;
+                        }
+                    }
                 }
-            }
 
-            foreach (CardPyramid fcd in foundation)
-            {
-
-                if (AdjacentRank(cd1, fcd))
+                foreach (CardPyramid fcd in foundation)
                 {
-                    return;
+
+                    if (AdjacentRank(cd, fcd))
+                    {
+                        return;
+                    }
                 }
             }
         }
