@@ -25,7 +25,7 @@ public class Pyramid : MonoBehaviour
 
     public float reloadDelay = 4f;
 
-    public Text gameOverText, roundResultText, highScoreText;
+    public Text gameOverText, roundResultText, highScoreText, DeckSizeText;
 
 
     [Header("Set Dynamically")]
@@ -262,6 +262,8 @@ public class Pyramid : MonoBehaviour
             cd.SetSortingLayerName(layout.drawPile.layerName);
             cd.SetSortOrder(-10 * i);
         }
+
+        DeckSizeText.text = "Draw Pile: " + drawPile.Count;
     }
 
     public void CardClicked(CardPyramid cd)
@@ -475,6 +477,7 @@ public class Pyramid : MonoBehaviour
             cd.SetSortOrder(-10 * i);
         }
 
+        DeckSizeText.text = "Draw Pile: " + drawPile.Count;
         foundation.Clear();
     }
 }

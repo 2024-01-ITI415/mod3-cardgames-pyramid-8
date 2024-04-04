@@ -15,7 +15,7 @@ public class PyramidScoreManager : MonoBehaviour
 {
     static private PyramidScoreManager S;
 
-    public static int LOW_MOVES = 0;
+    public static int LOW_MOVES = 1000;
 
     [Header("Set Dynamically")]
     public int chain = 0;
