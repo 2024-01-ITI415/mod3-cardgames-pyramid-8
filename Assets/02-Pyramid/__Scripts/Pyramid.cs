@@ -183,7 +183,7 @@ public class Pyramid : MonoBehaviour
                 }
             }
 
-            if (blockersGone == cd.blocking.Count) 
+            if (blockersGone == cd.blocking.Count)
                 cd.state = PyramidCardState.available;
         }
     }
@@ -213,11 +213,11 @@ public class Pyramid : MonoBehaviour
             fcd.transform.localPosition = new Vector3(
                 layout.multiplier.x * (layout.foundation.x),
                 layout.multiplier.y * (layout.foundation.y),
-                -layout.foundation.layerID + 0.1f * (i+1));
+                -layout.foundation.layerID + 0.1f * (i + 1));
 
             fcd.faceUp = true;
             fcd.SetSortingLayerName(layout.foundation.layerName);
-            fcd.SetSortOrder(-10 * (i+1));
+            fcd.SetSortOrder(-10 * (i + 1));
         }
 
         cd.state = PyramidCardState.available;
@@ -330,21 +330,26 @@ public class Pyramid : MonoBehaviour
             return;
         }
 
-        foreach (CardPyramid cd in pyramid)
+        foreach (CardPyramid cd1 in pyramid)
         {
-            if (firstCard == null)
+            foreach (CardPyramid pcd in pyramid)
             {
-                firstCard = cd;
+
+                if (AdjacentRank(cd1, pcd))
+                {
+                    return;
+                }
             }
 
-                if (AdjacentRank(firstCard, cd))
+            foreach (CardPyramid fcd in foundation)
             {
-                firstCard = null;
-                return;
+
+                if (AdjacentRank(cd1, fcd))
+                {
+                    return;
+                }
             }
-            firstCard = cd;
         }
-
         GameOver(false);
     }
 
@@ -457,10 +462,14 @@ public class Pyramid : MonoBehaviour
                 layout.multiplier.y * (layout.drawPile.y + i * dpStagger.y),
                 -layout.drawPile.layerID + 0.1f * i);
             cd.faceUp = false;
+
+            drawPile.Add(cd);
             cd.state = PyramidCardState.drawpile;
 
             cd.SetSortingLayerName(layout.drawPile.layerName);
             cd.SetSortOrder(-10 * i);
         }
+
+        foundation.Clear();
     }
 }
