@@ -503,7 +503,7 @@ GameObject:
   - component: {fileID: 827460509}
   - component: {fileID: 827460514}
   - component: {fileID: 827460516}
-  - component: {fileID: 827460517}
+  - component: {fileID: 827460519}
   - component: {fileID: 827460518}
   m_Layer: 0
   m_Name: _MainCamera
@@ -711,21 +711,6 @@ MonoBehaviour:
   - Draw
   - Foundation
   - Discard
---- !u!114 &827460517
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 827460508}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ce947e9a6e55cd4180c9686d6f7a293, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  chain: 0
-  scoreRun: 0
-  score: 0
 --- !u!114 &827460518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -760,6 +745,21 @@ MonoBehaviour:
   discardPile: []
   fsRun: {fileID: 0}
   firstCard: {fileID: 0}
+--- !u!114 &827460519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 827460508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7dddcfd440b745c499542f46e7c71215, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chain: 0
+  scoreRun: 0
+  score: 0
 --- !u!1 &1201328031
 GameObject:
   m_ObjectHideFlags: 0

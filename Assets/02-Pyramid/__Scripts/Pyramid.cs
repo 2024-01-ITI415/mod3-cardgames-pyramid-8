@@ -53,7 +53,7 @@ public class Pyramid : MonoBehaviour
         {
             highScoreText = go.GetComponent<Text>();
         }
-        int highScore = ScoreManager.HIGH_SCORE;
+        int highScore = PyramidScoreManager.LOW_MOVES;
         string hScore = "High Score: " + Utils.AddCommasToNumber(highScore);
         go.GetComponent<Text>().text = hScore;
 
@@ -80,7 +80,7 @@ public class Pyramid : MonoBehaviour
 
     void Start()
     {
-        Scoreboard.S.score = ScoreManager.SCORE;
+        Scoreboard.S.score = PyramidScoreManager.SCORE;
 
         deck = GetComponent<Deck>();
         deck.InitDeck(deckXML.text);
@@ -274,8 +274,8 @@ public class Pyramid : MonoBehaviour
             case PyramidCardState.drawpile:
                 MoveToFoundation(Draw());
                 UpdateDrawPile();
-                ScoreManager.EVENT(eScoreEvent.draw);
-                FloatingScoreHandler(eScoreEvent.draw);
+                PyramidScoreManager.EVENT(PyramidScoreEvent.draw);
+                FloatingScoreHandler(PyramidScoreEvent.draw);
                 break;
             case PyramidCardState.available:
                 if (cd.rank == 13)
@@ -284,8 +284,8 @@ public class Pyramid : MonoBehaviour
                     foundation.Remove(cd);
                     MoveToDiscard(cd);
                     UpdatePyramidAvailability();
-                    ScoreManager.EVENT(eScoreEvent.mine);
-                    FloatingScoreHandler(eScoreEvent.mine);
+                    PyramidScoreManager.EVENT(PyramidScoreEvent.match);
+                    FloatingScoreHandler(PyramidScoreEvent.match);
                     return;
                 }
                 if (firstCard == null)
@@ -308,8 +308,8 @@ public class Pyramid : MonoBehaviour
                     pyramid.Remove(cd);
                     MoveToDiscard(cd);
                     UpdatePyramidAvailability();
-                    ScoreManager.EVENT(eScoreEvent.mine);
-                    FloatingScoreHandler(eScoreEvent.mine);
+                    PyramidScoreManager.EVENT(PyramidScoreEvent.match);
+                    FloatingScoreHandler(PyramidScoreEvent.match);
                 }
                 break;
         }
@@ -360,7 +360,7 @@ public class Pyramid : MonoBehaviour
 
     void GameOver(bool won)
     {
-        int score = ScoreManager.SCORE;
+        int score = PyramidScoreManager.SCORE;
         if (fsRun != null)
             score += fsRun.score;
 
@@ -369,13 +369,13 @@ public class Pyramid : MonoBehaviour
             gameOverText.text = "Round Over";
             roundResultText.text = "You won this round!\nRound Score: " + score;
             ShowResultsUI(true);
-            ScoreManager.EVENT(eScoreEvent.gameWin);
-            FloatingScoreHandler(eScoreEvent.gameWin);
+            PyramidScoreManager.EVENT(PyramidScoreEvent.gameWin);
+            FloatingScoreHandler(PyramidScoreEvent.gameWin);
         }
         else
         {
             gameOverText.text = "Game Over";
-            if (ScoreManager.HIGH_SCORE <= score)
+            if (PyramidScoreManager.LOW_MOVES >= score)
             {
                 string str = "You got a new high score!\nHigh Score: " + score;
                 roundResultText.text = str;
@@ -383,8 +383,8 @@ public class Pyramid : MonoBehaviour
             else roundResultText.text = "Your final score was " + score;
             ShowResultsUI(true);
 
-            ScoreManager.EVENT(eScoreEvent.gameLoss);
-            FloatingScoreHandler(eScoreEvent.gameLoss);
+            PyramidScoreManager.EVENT(PyramidScoreEvent.gameLoss);
+            FloatingScoreHandler(PyramidScoreEvent.gameLoss);
         }
 
         Invoke(nameof(ReloadLevel), reloadDelay);
@@ -405,14 +405,13 @@ public class Pyramid : MonoBehaviour
         return false;
     }
 
-    void FloatingScoreHandler(eScoreEvent evt)
+    void FloatingScoreHandler(PyramidScoreEvent evt)
     {
         List<Vector2> fsPts;
         switch (evt)
         {
-            case eScoreEvent.draw:
-            case eScoreEvent.gameWin:
-            case eScoreEvent.gameLoss:
+            case PyramidScoreEvent.gameWin:
+            case PyramidScoreEvent.gameLoss:
                 if (fsRun != null)
                 {
                     fsPts = new List<Vector2>
@@ -427,7 +426,8 @@ public class Pyramid : MonoBehaviour
                     fsRun = null;
                 }
                 break;
-            case eScoreEvent.mine:
+            case PyramidScoreEvent.draw:
+            case PyramidScoreEvent.match:
                 FloatingScore fs;
                 Vector2 p0 = Input.mousePosition;
                 p0.x /= Screen.width;
@@ -438,7 +438,7 @@ public class Pyramid : MonoBehaviour
                     fsPosMid,
                     fsPosRun
                 };
-                fs = Scoreboard.S.CreateFloatingScore(ScoreManager.CHAIN, fsPts);
+                fs = Scoreboard.S.CreateFloatingScore(PyramidScoreManager.CHAIN, fsPts);
                 fs.fontSizes = new List<float>(new float[] { 4, 50, 28 });
                 if (fsRun == null)
                 {
