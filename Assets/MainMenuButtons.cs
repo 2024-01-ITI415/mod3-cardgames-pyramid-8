@@ -9,4 +9,9 @@ public class MainMenuButtons : MonoBehaviour
     {
         SceneManager.LoadScene("__Prospector");
     }
+
+    public void PyramidBUtton()
+    {
+        SceneManager.LoadScene("__Pyramid");
+    }
 }
