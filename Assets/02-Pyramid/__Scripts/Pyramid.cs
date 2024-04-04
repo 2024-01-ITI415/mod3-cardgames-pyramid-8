@@ -154,8 +154,6 @@ public class Pyramid : MonoBehaviour
             }
         }
 
-        MoveToFoundation(Draw());
-
         UpdateDrawPile();
     }
 
@@ -294,7 +292,6 @@ public class Pyramid : MonoBehaviour
                 {
                     firstCard = cd;
                     cd.Halo.enabled = true;
-
                 }
                 else
                 {
@@ -335,7 +332,12 @@ public class Pyramid : MonoBehaviour
 
         foreach (CardPyramid cd in pyramid)
         {
-            if (AdjacentRank(firstCard, cd))
+            if (firstCard == null)
+            {
+                firstCard = cd;
+            }
+
+                if (AdjacentRank(firstCard, cd))
             {
                 firstCard = null;
                 return;
