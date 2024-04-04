@@ -30,6 +30,7 @@ public class PyramidScoreManager : MonoBehaviour
 
         if (PlayerPrefs.HasKey("PyramidLeastMoves"))
             LOW_MOVES = PlayerPrefs.GetInt("PyramidLeastMoves");
+        Debug.Log("Low Moves: " + LOW_MOVES);
     }
 
     static public void EVENT(PyramidScoreEvent evt)

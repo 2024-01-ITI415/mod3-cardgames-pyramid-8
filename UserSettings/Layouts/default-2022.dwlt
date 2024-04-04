@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1462.8572
     height: 824.00006
   m_ShowMode: 4
-  m_Title: Scene
+  m_Title: Game
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -75,7 +75,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 93
+  controlID: 89
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -343,7 +343,7 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 19446
+  m_LastSelectedObjectID: 22228
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -390,7 +390,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/02-Pyramid
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -398,16 +398,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets
+  - Assets/02-Pyramid
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\GitHub\mod3-cardgames-pyramid-8
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: ee4c0000
-    m_LastClickedID: 19694
-    m_ExpandedIDs: 00000000ee4c0000f24c000000ca9a3b
+    m_SelectedIDs: 6e4c0000
+    m_LastClickedID: 19566
+    m_ExpandedIDs: 000000006c4c00006e4c000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -435,7 +435,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000ee4c0000f04c0000f24c0000
+    m_ExpandedIDs: 000000006c4c00006e4c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -479,7 +479,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 5}
+      m_ClientGUIView: {fileID: 10}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -579,7 +579,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 186cfdff566cfdffbc6cfdffca75fdffe87cfdfff68bfeffe831ffff1842ffffca77ffff7c86ffff949affff90b0ffffacb5ffff48c2ffffa6cdffff22fbffff0e4c0000dc610000e66100000862000018620000fa6300002664000036640000
+      m_ExpandedIDs: 1a1fffffe82ffffff853ffffd087ffff949cffffa8d7ffff2efbffffce4e0000e2500000ec500000065100000e5100001e5100006e51000078510000925100009a510000aa510000fa56000066580000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -934,9 +934,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 597.251, y: 377.5149, z: -33.76512}
+    m_Target: {x: 561.8479, y: 616.19275, z: -47.42354}
     speed: 2
-    m_Value: {x: 597.251, y: 377.5149, z: -33.76512}
+    m_Value: {x: 561.8479, y: 616.19275, z: -47.42354}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -986,9 +986,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: -0.029685415, y: 0.007495663, z: 0.00016856943, w: 0.99953115}
   m_Size:
-    m_Target: 319.55023
+    m_Target: 317.61285
     speed: 2
-    m_Value: 305.7897
+    m_Value: 317.61285
   m_Ortho:
     m_Target: 0
     speed: 2

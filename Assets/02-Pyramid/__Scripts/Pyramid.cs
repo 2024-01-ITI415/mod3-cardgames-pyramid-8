@@ -360,7 +360,7 @@ public class Pyramid : MonoBehaviour
         GameOver(false);
     }
 
-    void GameOver(bool won)
+    public void GameOver(bool won)
     {
         int score = PyramidScoreManager.SCORE;
         if (fsRun != null)
@@ -369,7 +369,12 @@ public class Pyramid : MonoBehaviour
         if (won)
         {
             gameOverText.text = "Round Over";
-            roundResultText.text = "You won this round!\nRound Score: " + score;
+            if (PyramidScoreManager.LOW_MOVES >= score)
+            {
+                string str = "You got a new high score!\nHigh Score: " + score;
+                roundResultText.text = str;
+            }
+            else roundResultText.text = "You won this round!\nRound Score: " + score;
             ShowResultsUI(true);
             PyramidScoreManager.EVENT(PyramidScoreEvent.gameWin);
             FloatingScoreHandler(PyramidScoreEvent.gameWin);
@@ -377,12 +382,7 @@ public class Pyramid : MonoBehaviour
         else
         {
             gameOverText.text = "Game Over";
-            if (PyramidScoreManager.LOW_MOVES >= score)
-            {
-                string str = "You got a new high score!\nHigh Score: " + score;
-                roundResultText.text = str;
-            }
-            else roundResultText.text = "Your final score was " + score;
+            roundResultText.text = "Your final score was " + score;
             ShowResultsUI(true);
 
             PyramidScoreManager.EVENT(PyramidScoreEvent.gameLoss);
