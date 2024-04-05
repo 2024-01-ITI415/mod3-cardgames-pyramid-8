@@ -64,7 +64,6 @@ public class PyramidScoreManager : MonoBehaviour
         switch (evt)
         {
             case PyramidScoreEvent.gameWin:
-            case PyramidScoreEvent.gameLoss:
                 if (LOW_MOVES >= score)
                 {
                     print("You got the fewest moves! Moves: " + score);
@@ -72,6 +71,10 @@ public class PyramidScoreManager : MonoBehaviour
                     PlayerPrefs.SetInt("PyramidLeastMoves", score);
                 }
                 else print("Your final moves for the game was " + score);
+                break;
+
+            case PyramidScoreEvent.gameLoss:
+                print("Your final moves for the game was " + score);
                 break;
 
             default:
