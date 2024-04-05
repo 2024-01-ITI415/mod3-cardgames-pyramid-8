@@ -90,7 +90,7 @@ public class Pyramid : MonoBehaviour
         layout.ReadLayout(layoutXML.text);
 
         drawPile = ConvertListCardsToListCardPyramids(deck.cards);
-        Debug.Log(drawPile[0]);
+        //Debug.Log(drawPile[0]);
         LayoutGame();
         UpdatePyramidAvailability();
     }
@@ -102,7 +102,7 @@ public class Pyramid : MonoBehaviour
         foreach (Card tCD in lCD)
         {
             tCP = tCD as CardPyramid;
-            Debug.Log(tCD);
+            //Debug.Log(tCD);
             lCP.Add(tCP);
         }
         return lCP;
@@ -231,7 +231,6 @@ public class Pyramid : MonoBehaviour
         cd.faceUp = true;
 
         cd.SetSortingLayerName(layout.foundation.layerName);
-        Debug.Log(layout.foundation.layerName);
         cd.SetSortOrder(0);
 
         if (firstCard != null)
