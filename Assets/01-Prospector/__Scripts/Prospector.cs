@@ -4,7 +4,6 @@ using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.Tilemaps;
-using TMPro.EditorUtilities;
 using System;
 using System.Security.Cryptography;
 
@@ -244,7 +243,6 @@ public class Prospector : MonoBehaviour {
 
 	// CardClicked is called any time a card in the game is clicked
 	public void CardClicked(CardProspector cd) {
-		Debug.Log("In CardClicked" + cd.name);
 		// The reacion is determined by the state of the clicked card
 		switch(cd.state) {
 			case eCardState.target:
@@ -350,7 +348,7 @@ public class Prospector : MonoBehaviour {
 
 	void ReloadLevel() {
 		// Reload the scene, resetting the game
-		SceneManager.LoadScene("_Prospector");
+		SceneManager.LoadScene("__Prospector");
 	}
 
 	// Return true if the two cards are adjacent in rank (A & K Wrap around)

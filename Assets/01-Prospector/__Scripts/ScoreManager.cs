@@ -62,6 +62,11 @@ public class ScoreManager : MonoBehaviour
                 score += scoreRun;      // add scoreRun to total score
                 scoreRun = 0;           // add score for this card to run
                 break;
+            
+            case eScoreEvent.mine:      // Remove a mine card
+                chain++;                // increase the score chain
+                scoreRun += chain;      // add score for this card to run
+                break;
         }
 
         // This second switch statement handles round wins and losses

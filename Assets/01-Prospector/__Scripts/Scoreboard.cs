@@ -24,7 +24,7 @@ public class Scoreboard : MonoBehaviour
         }
         set {
             _score = value;
-            scoreString = _score.ToString("NO");
+            scoreString = _score.ToString("N0");
         }
     }
 
@@ -57,7 +57,7 @@ public class Scoreboard : MonoBehaviour
     // This will instantiate a new FloatingScore GameObject and initalize it.
     // It also returns a pointer to the FloatingScore created so that the calling
     // function can do more with it (like set fontSizes, and so on)
-    public FloatingScore CreateFloatingScore (int amt, List<Vector2> pts) {
+    public FloatingScore CreateFloatingScore(int amt, List<Vector2> pts) {
         GameObject go = Instantiate<GameObject>(prefabFloatingScore);
         go.transform.SetParent(canvasTrans);
         FloatingScore fs = go.GetComponent<FloatingScore>();
@@ -65,17 +65,5 @@ public class Scoreboard : MonoBehaviour
         fs.reportFinishTo = this.gameObject; // Set fs to call back to this
         fs.Init(pts);
         return(fs);
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
