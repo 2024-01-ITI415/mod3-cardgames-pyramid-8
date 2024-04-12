@@ -76,7 +76,7 @@
               "RelativeDocumentMoniker": "Assets\\02-Pyramid\\__Scripts\\PyramidScoreManager.cs",
               "ToolTip": "D:\\GitHub\\mod3-cardgames-pyramid-8\\Assets\\02-Pyramid\\__Scripts\\PyramidScoreManager.cs",
               "RelativeToolTip": "Assets\\02-Pyramid\\__Scripts\\PyramidScoreManager.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABoAAAAWAAAA",
+              "ViewState": "AQIAADEAAAAAAAAAAAAuwD8AAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-04T05:02:21.602Z",
               "EditorCaption": ""
@@ -91,8 +91,7 @@
               "RelativeToolTip": "Assets\\02-Pyramid\\__Scripts\\DeckReshuffler.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-04T04:43:01.647Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-04T04:43:01.647Z"
             },
             {
               "$type": "Document",
@@ -102,7 +101,7 @@
               "RelativeDocumentMoniker": "Assets\\02-Pyramid\\__Scripts\\Pyramid.cs",
               "ToolTip": "D:\\GitHub\\mod3-cardgames-pyramid-8\\Assets\\02-Pyramid\\__Scripts\\Pyramid.cs",
               "RelativeToolTip": "Assets\\02-Pyramid\\__Scripts\\Pyramid.cs",
-              "ViewState": "AQIAAGYBAAAAAAAAAAAUwHIBAAAtAAAA",
+              "ViewState": "AQIAADwBAAAAAAAAAAAkwG0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-28T22:10:45.178Z",
               "EditorCaption": ""
@@ -129,8 +128,7 @@
               "RelativeToolTip": "Assets\\01-Prospector\\__Scripts\\ScoreManager.cs",
               "ViewState": "AQIAAAsAAAAAAAAAAAAIwCMAAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-26T01:29:00.865Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-26T01:29:00.865Z"
             },
             {
               "$type": "Document",
@@ -190,8 +188,7 @@
               "RelativeToolTip": "Assets\\MainMenuButtons.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-26T03:37:30.112Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-26T03:37:30.112Z"
             },
             {
               "$type": "Document",

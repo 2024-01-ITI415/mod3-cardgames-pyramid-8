@@ -1252,7 +1252,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'High Score: 0'
+  m_Text: 'High Score: N/A'
 --- !u!222 &1353348446
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1331,7 +1331,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Lowest Moves: 0'
+  m_Text: 'Lowest Moves: N/A'
 --- !u!222 &1376155618
 CanvasRenderer:
   m_ObjectHideFlags: 0
